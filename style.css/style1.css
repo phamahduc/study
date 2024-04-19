@@ -1,35 +1,39 @@
 .card {
-    width: 300px;
-    height: 200px;
-    perspective: 1000px;
-    cursor: pointer;
-  }
-  
-  .front, .back {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    backface-visibility: hidden;
-  }
-  
-  .front {
-    background-color: #f0f0f0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.5s;
-  }
-  
-  .back {
-    background-color: #ffd700;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: rotateY(180deg);
-    transition: transform 0.5s;
-  }
-  
-  .card:hover .front {
-    transform: rotateY(-180deg);
-  }
-  
+  width: 300px;
+  height: 200px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.front, .back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  transition: transform 0.5s;
+}
+
+.front {
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.back {
+  background-color: #ffd700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotateY(180deg);
+}
+
+.card:hover .front {
+  transform: rotateY(-180deg);
+}
+
+.card:hover .back {
+  background-image: url('your-image-url.jpg');
+  background-size: cover;
+  background-position: center;
+}
